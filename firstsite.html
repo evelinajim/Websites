@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+  ul.horizontal li {
+    list-style-type: none;
+  	display:inline-block;	
+    
+  }
+ 
+  ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;	
+    background-color: rgb(0, 38, 73); 
+    position: fixed;
+    top: 0;
+    width:100%;
+  }
+
+  ul.navbar li a {			
+    display:block;
+    padding: 14px 16px;
+    color:black;
+    text-align:center;
+    text-decoration: none;
+  }  
+
+  ul.navbar li a:hover {
+    background-color: rgb(124,33,40); 
+    color:white;
+  }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: Azure;
+}
+  body{
+  background-image: url('https://www.thefix.com/sites/default/files/styles/article/public/pinkcloud.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  input{
+    background-color:LavenderBlush;
+  }
+  ul{
+    background-image: url('https://singularity-ffc.s3.amazonaws.com/products/10551/images/10551_28b59801-9639-4748-ae93-4a710c0b0016.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 20px;
+  }
+  p{
+    color:white;
+    margin: 20px;
+  }
+  h1{
+    color:white;
+    text-align: center;
+  }
+  
+  #about {
+    color: black;
+    text-align:center;
+    display:inline-block;	
+    
+  }
+  #cool {
+    color: Azure;
+    text-align:center;
+    font-family: OCR A Std, monospace;
+  }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+  tr:hover td{
+    background-color:pink;
+  }
+  span.hidden {
+	display:none;
+}
+
+  div.reveal {
+	display:inline-block;
+}
+  div:hover span.hidden {
+	display:inline;
+	background-color:palevioletred;
+  color: white;
+	position: absolute;
+	margin-left: 50px;
+  border-style:double;
+}
+  
+  #title {
+    margin-top: 60px;
+    position: relative;
+  }
+</style>
+	<title> Eve's Favorite Albums </title>
+</head>
+
+<body>
+  <ul class = "horizontal navbar">
+  <li> <a href="#top">Home</a> </li>
+  <li> <a href="#headerabout">About</a> </li>
+  <li> <a href="#">Page 1</a> </li>
+  </ul>
+  
+<h1 id="title"> Best Albums No Cap  </h1>
+<p> Below are some of the best albums from really great artists. </p>
+<p> Honorable Mentions not in the list:</p>
+<ul>
+  <p></p>
+    <li> Kissland by the Weekend</li>
+	<li> Mono by RM</li>
+	<li> Any album by Ariana</li>
+    <li> Any album by Troye Sivan</li>
+  <p></p>
+  
+</ul>
+<form action="/action_page.php" method="post">
+<table style="width:100%">
+<tr>
+	<th>  Check  </th>
+	<th>How Many?</th>
+	<th>Product</th>
+	<th>More Information . . .</th>
+</tr>
+<tr>
+	<td><input type="checkbox"></td>
+	<td><input type="number" name="quantity" min="1" max="10"></td>
+	<td>Map Of the Soul: 7 Album</td>
+	<td><div class = "reveal"><a href = "https://www.amazon.com/Map-Soul-7-BTS/dp/B0833VRHN3">Amazon</a>
+  <span class = "hidden">
+    This album talks about the Ego, Shadow, and the Persona. It brings Jungian Theory through promotion of
+    other artists, modern dancing, film, and musical manipulation. Best album. Best band. Not biased.
+  </span></div></td>
+  </tr>
+<tr>
+	<td><input type="checkbox"></td>
+	<td><input type="number" name="quantity" min="1" max="10"></td>
+	<td>Dirty Computer Album </td>
+	<td><div class = "reveal"><a href = "https://en.wikipedia.org/wiki/Dirty_Computer"> Wikipedia</a>
+  <span class = "hidden"> This album is a trip. Janelle Monae takes us on a visual album that talks about 
+    conversion to the acceptance of all parts of herself. It's a great album with a mix of songs. Mainly RnB, Jazz, Pop
+  </span></div></td>
+  </tr>
+<tr>
+	<td><input type="checkbox"></td>
+	<td><input type="number" name="quantity" min="1" max="10"></td>
+	<td>A Song for Every Moon Album</td>
+	<td><div class = "reveal"><a href="https://www.amazon.com/Song-Every-Moon-Bruno-Major/dp/B074V45QH8">Amazon</a>
+    <span class = "hidden"> This is a more chill album. This contains songs that are slower and ones that you can vibe to
+    </span></div></td>
+</tr>
+<tr>
+	<td><input type="checkbox"></td>
+	<td><input type="number" name="quantity" min="1" max="10"></td>
+	<td>Before We Begin Album</td>
+  <td><div class = "reveal"><a href="https://www.amazon.com/Stone-Music-Entertainment-ERIC-NAM/dp/B07ZZ1NVFH">Amazon</a>
+    <span class = "hidden">This is an album by Eric  Nam. A great singer who kills it in both English and Korean. His songs range from vibes songs to party songs
+    </span></div></td>
+</tr>
+</table>
+  <p>
+  </p>
+<input type="submit" value="Submit"/>
+<input type="reset" value="Reset"/>
+</form>
+
+  
+  <h1 id="headerabout">
+  About Creator
+  </h1>
+  <p></p>
+  <p id="about">
+    <br>
+    <br>
+        <i>
+      The creator, who is currently typing in third person for this introduction, enjoys four things: 
+    Photoshop, analyzing map of the soul, and their 2D Animation class. She hopes to one day
+    write something as good as Studio Ghibli productions.</i>
+  </p>
+  <p id="cool"> <font size="9"><i>:D Look at this</i></font>  </p>      
+  <p>    <img src="https://66.media.tumblr.com/236c3019e553b9c660e61f1e9d5f45f8/1395bd2496f49356-5a/s540x810/586c51d44fa784eac7db8cd80cec7751f4e5d1e3.gif" class="center"> </p>
+  </body>
+</html>
+

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{
+  background-image: url('https://wallpapercave.com/wp/SIybTJM.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  ul.horizontal li {
+    list-style-type: none;
+  	display:inline-block;	
+  }
+ 
+  ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;	
+    background-color: rgb(0, 38, 73); 
+    position: fixed;
+    top: 0;
+    width:100%;
+  }
+
+  ul.navbar li a {			
+    display:block;
+    padding: 14px 16px;
+    color:white;
+    text-align:center;
+    text-decoration: none;
+  }  
+
+  ul.navbar li a:hover {
+    background-color: rgb(124,33,40); 
+    color:white;
+  }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: Azure;
+}
+  input{
+    background-color:LavenderBlush;
+  }
+  ul{
+    background-image: url('https://www.blueorigin.com/assets/webcast_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin: 20px;
+    color: white;
+  }
+  p{
+    color:white;
+    margin: 20px;
+  }
+  h1{
+    color:white;
+    text-align: center;
+  }
+  
+  #about {
+    color: white;
+    text-align:center;
+    display:inline-block;	
+    
+  }
+  #cool {
+    color: Azure;
+    text-align:center;
+    font-family: OCR A Std, monospace;
+  }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+  tr:hover td{
+    background-color:pink;
+  }
+  
+  #title {
+    margin-top: 60px;
+    position: relative;
+  }
+</style>
+	<title> Eve's Favorite Albums </title>
+</head>
+
+<body>
+  <ul class = "horizontal navbar">
+  <li> <a href="#top">Home</a> </li>
+  <li> <a href="#headerabout">About</a> </li>
+  </ul>
+  
+<h1 id="title"> Remy's Not So Secret Recipes </h1>
+<p> Welcome to the best dishes you will find in all of France. Here you can learn how to make the dishes while also learning the history
+  of one of the best cook's in all of France and Disney Productions: Remy. </p>
+<p>  Cooking Playlist:</p>
+<ul>
+  <p></p>
+    <li> Map of the Soul: 7</li>
+	<li> Mono by RM</li>
+	<li> Any album by Ariana </li>
+    <li> Any album by Troye Sivan</li>
+  <li>Before we begin by Eric Nam</li>
+  <p></p>
+  
+</ul>
+
+  <script>
+    
+    
+    
+    
+   
+    titles = ['Check','How much','Product']
+    
+    let items=['Ratatouille','Omelette Du Fromage','Potato and Leek Soup','SweetBreads Ala Gusteau']
+    
+    row1 = '1';
+    row2 = '2';
+    row3 ='3';
+    row4 = '4';
+    document.write('<div class = "js">');
+   
+    document.write('<form onsubmit="summarize()" >');
+    document.write('<table>');
+    document.write('<tr>');
+    for (var i of titles) {
+      document.write('<th>' + i + '</th>'); 
+   
+    }
+   
+  
+   for (var j of items) {
+     document.write('<tr>');
+      document.write('<td> <input type="checkbox" id="check" ></td>'); 
+      document.write('<td><input id = "count" type="number" name="quantity" min="1" max="10" > </td>'); 
+      document.write('<td>' + j + '</td>'); 
+     document.write('</tr>');
+    }
+   
+  
+    
+    
+    document.write('</tr>');
+    document.write('</table>');
+    
+    
+    document.write('<input type="submit" value="Submit"/>');
+    document.write('<input type="reset" value="Reset"/>');
+    document.write('</form>');
+    
+    document.write('</div>');
+    
+    
+    
+    function processCheck(num) {
+	  let checkInput = document.getElementById('check');
+	  let numInput = document.getElementById('count');
+    
+    let checked = document.getElementById('check').checked;
+    
+    if (checked){
+      numInput.value = 1;
+      numInput.disabled = false;
+    } else {
+      numInput.value = "";
+      numInput.disabled = true;
+    }
+      
+    
+  }
+    
+    function processEmpty(num){
+    let checkInput = document.getElementById('check'+num);
+	  let numInput = document.getElementById('count'+num);
+      
+      if(count.value.length ==0){
+        check.checked=false;
+        count.disabled = true;
+      }
+      
+    }
+    
+    function summarize(){
+    
+    let rows = document.getElementsByTagName("tr");
+    let string="";
+      
+    for (var i = 1; i < rows.length; i++) {
+      let number = document.getElementById("count"+i).value;
+      string = string + 'Order: ' + items + ' Quantity: ' + count + "\n"; 
+    }
+    
+    alert(string);
+
+    }
+  </script>
+  
+  
+  
+  </body>
+</html>
