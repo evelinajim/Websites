@@ -1,0 +1,82 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title> Registration Page</title>
+
+<style>
+#login {
+	border: 1px solid black;
+	height: 100px;
+	width: 40%;
+	display:inline-block;
+   position: relative;
+}
+	
+#page {
+	background-color:black;
+	color:white;			
+   position: absolute;
+  top: 0px; 
+  right: 0px;
+}
+
+label {
+	color:dodgerblue;
+}
+	
+</style>
+
+</head>
+
+<body>
+
+<h1> Please register by completing the information below </h1>
+
+<div id = "login">
+	<label id = "lbl" for = "fname"> First name: </label>
+	<input id = "fname" type = "text" placeholder = "first name">
+	<button id = "btn" onclick = "continue1();"> Continue </button>
+	<div id = "page">Page 1/2</div>
+</div>
+
+
+<script>
+
+
+// gets intro div by its id, and changes its innerHTML
+function continue1() {
+  
+  if (fname.value.length==0){
+   return alert("Please enter a first name to continue...");
+  }
+  else {
+     fName= document.getElementById("fname").value;
+     document.getElementById('login').innerHTML = 
+    '<label id = "lbl" for = "lname"> Last name: </label> <input id = "lname" type = "text" placeholder = "last name"><button id = "btn" onclick = "continue2();"> Continue </button> <div id = "page">Page 2/2</div>';
+    
+  }
+  
+}
+  
+function continue2() {
+if (lname.value.length==0){
+   return alert("Please enter a last name to continue...");
+  }
+  else {
+     var lName= document.getElementById("lname").value;
+     document.getElementById('login').innerHTML = 
+       "Thank you for signing up <b>" + fName + " " + lName + ".</b><br>Have a great day!";
+  }
+}
+
+	
+
+</script>
+
+</body>
+
+</html>
+
+  
